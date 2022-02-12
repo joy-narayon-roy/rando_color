@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Background Color</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <p class="main_text">Click to change background color.
+            <br />
+            Corrent Color : <span id="color"></span>
+        </p>
+        <div class="colors">
+            <div class="colors--dropdown">
+                <div class="active--row">
+                    <div id="activRow" class="active--row_value">
+                        <span class="color_code"></span>
+                        <button onclick="likeIt(this)">
+                            <img src="" alt="" class="color_liked">
+                        </button>
+                    </div>
+                    <button class="active--row_btn" onclick="dropdown(this)" data-show="false" data-options="dropdownOptins"><img src="./img/arrow.png" alt=""></button>
+                </div>
+                <div id="dropdownOptins" class="color--dropdown_options">
+                   <!-- All item come from javascript -->
+                </div>
+            </div>
+        </div>
+        <div class="btn_container">
+            <button type="button" class="left" id="left">&leftarrow;</button>
+            <button type="button" id="chang_btn">Click</button>
+            <button type="button" class="right" id="right">&RightArrow;</button>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

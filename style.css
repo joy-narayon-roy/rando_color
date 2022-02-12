@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+
+}
+ img {
+    display: block;
+}
+
+.main {
+    width: auto;
+    max-width: 500px;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.main_text {
+    font-size: 1.4rem;
+}
+
+/* Drop Down*/
+.colors{
+    height: auto;
+    width: 100%;
+    margin: 1rem 0;
+}
+.colors--dropdown{
+    width: 100%;
+    /* max-height: 50px; */
+    border: 1px solid #f5f8fa;
+    border-radius: 5px;
+    position: relative;
+    background: #f8fbfd;
+}
+.colors--dropdown .active--row{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    padding: 5px;
+    flex-direction: row;
+    overflow: hidden;
+    border: 1px solid #495769;
+    border-radius: 5px;
+}
+.colors--dropdown .active--row .active--row_value{
+    /* width: 90%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.colors--dropdown .active--row .active--row_value .color_code{
+    flex: auto;
+    height: auto;
+    padding: 5px 10px;
+    text-align: left;
+    margin: auto 0;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+.colors--dropdown .active--row .active--row_value button{
+    width: 10%;
+    height: auto;
+    padding: 7px;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    transition-property: background;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+}
+.colors--dropdown .active--row .active--row_value button img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.colors--dropdown .active--row .active--row_value button:hover{
+    background: #628af8;
+}
+
+.colors--dropdown .active--row .active--row_btn{
+    display: block;
+    flex: 10%;
+    padding: 5px;
+    border: none;
+    margin-left: 5px;
+    background: #fff;
+    border-radius: 5px;
+}
+.colors--dropdown .active--row .active--row_btn img:not(.up){
+    display: block;
+    width: 100%;
+    transform: rotate(90deg);
+}
+.colors--dropdown .active--row .active--row_btn img.up{
+    display: block;
+    width: 100%;
+    transform: rotate(270deg);
+}
+
+/* Drop Down Options */
+.colors--dropdown .color--dropdown_options{
+    z-index: 9999;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: #fff;
+    border-radius: 5px;
+    overflow-y: scroll;
+    transition-property: height;
+    transition-duration: .5s;
+    transition-timing-function: ease-in;
+}
+.colors--dropdown .color--dropdown_options.show{
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    transition-property: height;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+}
+.colors--dropdown .color--dropdown_options::-webkit-scrollbar{
+    width: 0;
+}
+.colors--dropdown .color--dropdown_options .option_row{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    padding: 10px 5px;
+    flex-direction: row;
+    overflow: hidden;
+    border-bottom: 1px solid #4957695d;
+
+}
+.color--dropdown .color--dropdown_options .option_row:first-child{
+    border-top: 1px solid #4957695d;
+}
+.colors--dropdown .color--dropdown_options .option_row .color_code{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto 0;
+    text-align: left;
+    font-size: 1.01rem;
+    padding: 0 10px;
+}
+.colors--dropdown .color--dropdown_options .option_row button{
+    display: block;
+    width:35px;
+    height: 35px;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    
+}
+.colors--dropdown .color--dropdown_options .option_row button img{
+    display: block;
+    width: 100%;
+}
+
+/* Controller Buttons */
+.btn_container{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.btn_container button{
+    display: block;
+    font-size: 1.2rem;
+    padding: 0.25rem 0.9rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    transition-property: background;
+    transition-duration: 0.5s;
+}
+.btn_container button:hover{
+    background: #5B6D83;
+    color: #fff;
+}
+.btn_container button:disabled{
+    opacity: 0.5;
+}
